@@ -4,7 +4,7 @@ var path				= require('path')
 
 config.server = {
 		mode: 'development',
-		port: '8100',
+		port: '3000',
 		host: '127.0.0.1',
 		protocol: 'http',
 		sessionSecret: 'backdraft 1234',

@@ -2,10 +2,10 @@
   "name": "backdraft-server-example",
   "version": "0.0.0",
   "description": "Example for BackDraft API server.",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node app.js",
 		"dev": "rm -f node_modules/backdraft;ln -s ../../backdraft node_modules/backdraft"
   },
   "repository": {
