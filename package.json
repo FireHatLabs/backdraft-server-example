@@ -1,0 +1,23 @@
+{
+  "name": "backdraft-server-example",
+  "version": "0.0.0",
+  "description": "Example for BackDraft API server.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FireHatLabs/backdraft-server-example.git"
+  },
+  "author": "Chris Compton, Fire Hat Labs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FireHatLabs/backdraft-server-example/issues"
+  },
+  "homepage": "https://github.com/FireHatLabs/backdraft-server-example",
+  "dependencies": {
+    "backdraft": "0.0.2"
+  }
+}
