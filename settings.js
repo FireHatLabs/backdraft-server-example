@@ -43,32 +43,32 @@ config.logs = {
 			{
 				name: 'debug',
 				enabled: true,
-				filePath: './log'
+				filePath: './'
 			},
 			{
 				name: 'info',
 				enabled: true,
-				filePath: './log'
+				filePath: './'
 			},
 			{
 				name: 'error',
 				enabled: true,
-				filePath: './log'
+				filePath: './'
 			},
 			{
 				name: 'security',
 				enabled: true,
-				filePath: './log'
+				filePath: './'
 			},
 			{
 				name: 'exception',
 				enabled: true,
-				filePath: './log'
+				filePath: './'
 			},
 			{
 				name: 'audit',
 				enabled: true,
-				filePath: './log'
+				filePath: './'
 			}
 		]
 	};
