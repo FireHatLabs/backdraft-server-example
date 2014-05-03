@@ -10,22 +10,43 @@ var Responder = function Responder (api) {
 		fields: {
 			fName: { 
 				title: 'Name', type: 'alpha', validation: api.validation.alpha, 
-				editable: false, viewable: true, required: true
+				editable: false, viewable: true, required: true, param: true
 			},
 			fDesc: { 
 				title: 'Description', type: 'alpha', validation: api.validation.alpha, 
-				editable: true, viewable: true, required: true 
+				editable: true, viewable: true, required: true, param: false
 			},
 			fNotes: {
 				title: 'Notes', type: 'alpha', validation: api.validation.alpha,
-				editable: true, viewable: true, required: false
+				editable: true, viewable: true, required: false, param: false
 			}			
 		},
 		actions: {
-			httpGet: function () { api.log('GET: Item Responder') },
-			httpPost: function () { api.log('POST: Item Responder') },
-			httpPut: function () { api.log('PUT: Item Responder') },
-			httpDelete: function () { api.log('DELETE: Item Responder') }
+			httpGet: { 
+					auto: true,
+					handler: function () { api.log('GET: Item Responder') },
+				  validate: function () {}
+			},
+			httpPost: {
+					auto: true,
+					handler: function () { api.log('POST: Item Responder') },
+					validate: function () {}
+			},
+			httpPut: {
+					auto: true,
+					handler: function () { api.log('PUT: Item Responder') },
+					validate: function () {}
+			},
+			httpDelete: {
+					auto: true,
+					handler: function () { api.log('DELETE: Item Responder') },
+					validate: function () {}
+			},
+			httpParams : {
+					auto: true,
+					handler: function () { api.log('PARAM: Item Responder') },
+					validate: function () {}				
+			}
 		},
 		owner: { level: 'all', fields: ['fName','fDesc','fNotes'] },
 		group: { level: 'edit', fields: ['fName','fDesc'] },
