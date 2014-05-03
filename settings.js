@@ -6,6 +6,7 @@ config.server = {
 		mode: 'development',
 		port: '3000',
 		host: '127.0.0.1',
+		hostClient: 'http://127.0.0.1:3001',
 		protocol: 'http',
 		sessionSecret: 'backdraft 1234',
 		hashSalt: 'backdraft 4567',
