@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-		"dev": "rm -f node_modules/backdraft;ln -s ../../backdraft node_modules/backdraft"
+    "dev": "rm -f node_modules/backdraft;ln -s ../../backdraft node_modules/backdraft"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/FireHatLabs/backdraft-server-example",
   "dependencies": {
-    "backdraft": "0.0.2"
+    "backdraft": "0.0.3"
   }
 }
