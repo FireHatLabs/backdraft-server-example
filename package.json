@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "dev": "rm -f node_modules/backdraft;ln -s ../../backdraft node_modules/backdraft"
+    "dev": "rm -f node_modules/backdraft;ln -s ../../backdraft node_modules/backdraft",
+    "delog": "rm -f *.log"
   },
   "repository": {
     "type": "git",
