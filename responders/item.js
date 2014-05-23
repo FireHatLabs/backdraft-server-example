@@ -1,7 +1,13 @@
 var meta = {source: 'responders/item.js'};
 
 var Responder = function Responder (api) {
+  api.routes.get('/items', function(req, res, next) {
+    api.view.renderItems(res, 'items', [{id: 1, title: "test1", description: "Item 1", comments: null}])
+  });
 
+
+
+  /*
 	this.prototype = {
 		route: '/item',
 		name: 'item',
@@ -52,9 +58,9 @@ var Responder = function Responder (api) {
 		group: { level: 'edit', fields: ['fName','fDesc'] },
 		world: { level: 'read', fields: ['fName','fDesc'] }
 	}
+	*/
 };
 
 module.exports = function (api) {
 	var responder = new Responder(api);
-	return responder.prototype;
 };
