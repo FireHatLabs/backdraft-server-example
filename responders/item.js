@@ -2,7 +2,7 @@ var meta = {source: 'responders/item.js'};
 
 var Responder = function Responder (api) {
   api.routes.get('/items', function(req, res, next) {
-    api.view.renderItems(res, 'items', [{id: 1, title: "test1", description: "Item 1", comments: null}])
+    api.view.renderItems(res, 'items', [{id: 1, title: "test1", description: "Item 1", comments: null}]);
   });
 
 
