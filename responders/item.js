@@ -1,10 +1,20 @@
 var meta = {source: 'responders/item.js'};
 
 var Responder = function Responder (api) {
+  var itemModel = api.model.create('Item',{
+    title: String,
+    description: String
+  });
+  
   api.routes.get('/items', function(req, res, next) {
-    api.view.renderItems(res, 'items', [{id: 1, title: "test1", description: "Item 1", comments: null}]);
+    api.view.renderItems(res, 'items', 'title description', itemModel);
   });
 
+  api.routes.post('/items', function(req, res, next) {
+    api.model.add(res, 'items', itemModel, req.body.item, function(document) {
+      api.view.renderItems(res, 'items', 'title description', itemModel);
+    });
+  });
 
 
   /*
