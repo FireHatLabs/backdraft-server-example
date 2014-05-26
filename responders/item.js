@@ -6,11 +6,11 @@ var Responder = function Responder (api) {
     description: String
   });
   
-  api.routes.get('/items', function(req, res, next) {
+  api.authenticated.get('/items', function(req, res, next) {
     api.view.renderItems(res, 'items', 'title description', itemModel);
   });
 
-  api.routes.post('/items', function(req, res, next) {
+  api.authenticated.post('/items', function(req, res, next) {
     api.model.add(res, 'items', itemModel, req.body.item, function(document) {
       api.view.renderItems(res, 'items', 'title description', itemModel);
     });
