@@ -5,14 +5,16 @@ var Responder = function Responder (api) {
     title: String,
     description: String
   });
+
+  var showFields = 'title description';
   
   api.authenticated.get('/items', function(req, res, next) {
-    api.view.renderItems(res, 'items', 'title description', itemModel);
+    api.view.renderItems(res, showFields, itemModel);
   });
 
   api.authenticated.post('/items', function(req, res, next) {
     api.model.add(res, 'items', itemModel, req.body.item, function(document) {
-      api.view.renderItems(res, 'items', 'title description', itemModel);
+      api.view.renderItems(res, showFields, itemModel);
     });
   });
 
